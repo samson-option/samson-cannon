@@ -22,3 +22,15 @@
 [debug] [2026-01-20T13:35:43.244Z] > authorizing via signed-in user (pablo@softreset.xyz)
 [debug] [2026-01-20T13:35:43.244Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
 [debug] [2026-01-20T13:35:43.244Z] > authorizing via signed-in user (pablo@softreset.xyz)
+[debug] [2026-01-20T13:38:08.500Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-20T13:38:08.502Z] > authorizing via signed-in user (pablo@softreset.xyz)
+[debug] [2026-01-20T13:38:08.508Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-20T13:38:08.508Z] > authorizing via signed-in user (pablo@softreset.xyz)
+[debug] [2026-01-20T13:38:08.667Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-20T13:38:08.668Z] > authorizing via signed-in user (pablo@softreset.xyz)
+[debug] [2026-01-20T13:38:08.668Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-20T13:38:08.668Z] > authorizing via signed-in user (pablo@softreset.xyz)
+[debug] [2026-01-20T13:38:08.721Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-20T13:38:08.721Z] > authorizing via signed-in user (pablo@softreset.xyz)
+[debug] [2026-01-20T13:38:08.722Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-20T13:38:08.722Z] > authorizing via signed-in user (pablo@softreset.xyz)
