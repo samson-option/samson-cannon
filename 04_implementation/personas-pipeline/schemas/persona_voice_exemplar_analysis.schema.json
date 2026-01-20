@@ -1,0 +1,510 @@
+{
+  "name": "persona_voice_exemplar_analysis",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "character_overview": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Proper name or display name of the persona."
+          },
+          "archetype": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Archetypal role or type (e.g. 'The Mentor', 'The Rebel')."
+          },
+          "summary": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Short summary describing this character/persona."
+          }
+        },
+        "required": [
+          "name",
+          "archetype",
+          "summary"
+        ],
+        "additionalProperties": false
+      },
+      "persona_profile": {
+        "type": "object",
+        "properties": {
+          "character_traits": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of notable personality traits."
+          },
+          "emotional_disposition": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Typical emotional state or outlook."
+          },
+          "core_values": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of most important values."
+          },
+          "implied_motivations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Likely hidden or implicit motivations."
+          },
+          "interaction_style": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Style in which this persona engages with others."
+          },
+          "archetypes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Multiple archetypes embodied simultaneously."
+          },
+          "persona_summary": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Concise paragraph summarizing the persona's personality."
+          }
+        },
+        "required": [
+          "character_traits",
+          "emotional_disposition",
+          "core_values",
+          "implied_motivations",
+          "interaction_style",
+          "archetypes",
+          "persona_summary"
+        ],
+        "additionalProperties": false
+      },
+      "voice_profile": {
+        "type": "object",
+        "properties": {
+          "tone": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Typical emotional tone ('cheerful', 'stoic', 'caustic', etc.)."
+          },
+          "formality": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Degree of formality in diction/style."
+          },
+          "voice_emotion": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Overt affect, e.g. warmth, intensity."
+          },
+          "speech_style": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Qualities such as pace, rhythm, sentence structure."
+          },
+          "signature_vocabulary": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of most-typical words the persona uses."
+          },
+          "figurative_language": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Common figurative language patterns (simile, metaphor, etc.)."
+          },
+          "dialogue_behavior": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "How the persona interacts in dialogues."
+          },
+          "quirks": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Speech quirks, hedges, pet phrases, stutters, etc."
+          }
+        },
+        "required": [
+          "tone",
+          "formality",
+          "voice_emotion",
+          "speech_style",
+          "signature_vocabulary",
+          "figurative_language",
+          "dialogue_behavior",
+          "quirks"
+        ],
+        "additionalProperties": false
+      },
+      "voice_style_dna": {
+        "type": "object",
+        "properties": {
+          "tone_palette": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Set of tones covered by this voice."
+          },
+          "emotional_trajectory": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Emotional arc or modulation typically exhibited."
+          },
+          "cadence": {
+            "type": "object",
+            "properties": {
+              "avg_sentence_length": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "description": "Average number of words per sentence."
+              },
+              "sentence_length_variance": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "description": "Description of variation in sentence lengths."
+              },
+              "cadence_category": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "description": "Qualitative category: 'choppy', 'measured', etc."
+              }
+            },
+            "required": [
+              "avg_sentence_length",
+              "sentence_length_variance",
+              "cadence_category"
+            ],
+            "additionalProperties": false
+          },
+          "punctuation_profile": {
+            "type": "object",
+            "properties": {
+              "exclamation_rate": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "description": "Average exclamation points per 100 sentences."
+              },
+              "question_rate": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "description": "Average questions per 100 sentences."
+              },
+              "ellipsis_rate": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "description": "Average ellipses per 100 sentences."
+              },
+              "dash_rate": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "description": "Average dashes per 100 sentences."
+              },
+              "notable_patterns": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "description": "Qualitative summary of unique punctuation habits."
+              }
+            },
+            "required": [
+              "exclamation_rate",
+              "question_rate",
+              "ellipsis_rate",
+              "dash_rate",
+              "notable_patterns"
+            ],
+            "additionalProperties": false
+          },
+          "lexical_signature": {
+            "type": "object",
+            "properties": {
+              "top_overused_words": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Most frequently overused words."
+              },
+              "common_phrases": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Most frequently repeated phrases."
+              },
+              "rare_words": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Unusually rare words for this style."
+              }
+            },
+            "required": [
+              "top_overused_words",
+              "common_phrases",
+              "rare_words"
+            ],
+            "additionalProperties": false
+          },
+          "figurative_devices": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Metaphors, similes, etc. frequently used."
+          },
+          "rhetorical_patterns": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Frequent rhetorical patterns, e.g. anaphora, repetition."
+          },
+          "structural_motifs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Typical structural features (lists, parallelism)."
+          },
+          "discourse_markers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Markers (e.g. 'well', 'so', 'actually')."
+          },
+          "signature_phrases": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Short phrases essentially unique to this voice."
+          },
+          "typical_cta_style": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Copywriting call-to-action style."
+          }
+        },
+        "required": [
+          "tone_palette",
+          "emotional_trajectory",
+          "cadence",
+          "punctuation_profile",
+          "lexical_signature",
+          "figurative_devices",
+          "rhetorical_patterns",
+          "structural_motifs",
+          "discourse_markers",
+          "signature_phrases",
+          "typical_cta_style"
+        ],
+        "additionalProperties": false
+      },
+      "persona_voice_exemplars": {
+        "type": "array",
+        "description": "5–15 verbatim first-person sentences (≤140 chars each) that best showcase the persona’s voice.",
+        "items": {
+          "type": "string"
+        }
+      },
+      "copywriting_samples": {
+        "type": "object",
+        "properties": {
+          "opening_lines": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Example opening lines in copy."
+          },
+          "pivot_lines": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Example lines for transitions or emphasis."
+          },
+          "closing_lines": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Example closing/ending lines."
+          },
+          "ctas": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Call-to-action lines or phrases."
+          },
+          "value_props": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of value propositions or USPs."
+          }
+        },
+        "required": [
+          "opening_lines",
+          "pivot_lines",
+          "closing_lines",
+          "ctas",
+          "value_props"
+        ],
+        "additionalProperties": false
+      },
+      "style_metrics": {
+        "type": "object",
+        "properties": {
+          "reading_grade_level": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Estimated US grade level required to read this voice."
+          },
+          "lexical_diversity": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Ratio of unique to total words."
+          },
+          "adjectives_per_100": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Adjectives used per 100 words."
+          },
+          "questions_per_100": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Questions per 100 sentences."
+          },
+          "ctas_per_100": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "CTAs per 100 sentences."
+          }
+        },
+        "required": [
+          "reading_grade_level",
+          "lexical_diversity",
+          "adjectives_per_100",
+          "questions_per_100",
+          "ctas_per_100"
+        ],
+        "additionalProperties": false
+      },
+      "representative_voice_snippets": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Selected representative, characteristic snippets from the persona’s writing."
+      },
+      "distinctiveness": {
+        "type": "object",
+        "properties": {
+          "what_makes_it_unique": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Description of characteristics that set this voice apart."
+          },
+          "distinctiveness_score": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Quantitative or qualitative distinctiveness assessment."
+          }
+        },
+        "required": [
+          "what_makes_it_unique",
+          "distinctiveness_score"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "character_overview",
+      "persona_profile",
+      "voice_profile",
+      "voice_style_dna",
+      "persona_voice_exemplars",
+      "copywriting_samples",
+      "style_metrics",
+      "representative_voice_snippets",
+      "distinctiveness"
+    ],
+    "additionalProperties": false
+  }
+}

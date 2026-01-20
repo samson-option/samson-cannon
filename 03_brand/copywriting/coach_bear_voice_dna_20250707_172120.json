@@ -1,0 +1,226 @@
+{
+  "voice_id": "546baa8e2332",
+  "persona": "coach_bear",
+  "sentence_patterns": [
+    {
+      "pattern_type": "long_sentence",
+      "pattern_value": "long_sentence",
+      "frequency": 2439,
+      "examples": [
+        "# coach-bears-coaching-philosophy\n\nPersona: Coach Bear\nDocument Type: Coaching Philosophy, Scientific Apprach, Coach Bear's Recovery Framework Recovery, character-bible, program-dna\nSemantic Use: This",
+        "Coach Bear is laser-focused on building the user\u2019s **self-efficacy** at every turn \u2013 that is, their belief in their own ability to succeed.",
+        "If a user who normally takes a stimulant every afternoon manages to go one afternoon without it for the first time in years, that\u2019s a **huge win** in Coach Bear\u2019s eyes, and he will make sure it\u2019s cele",
+        "The system will highlight it: \u201cNotice how you powered through the 3pm slump today with just a short walk and a coffee \u2013 proof that you *can* do it without the pill.\u201d This reframes the narrative from \u201c",
+        "The more the user experiences \u201cI did it!\u201d moments, the more their identity shifts to \u201cI can handle this.\u201d The program is structured to deliver a steady drip of such experiences."
+      ],
+      "context": {
+        "category": "structure"
+      }
+    },
+    {
+      "pattern_type": "short_sentence",
+      "pattern_value": "short_sentence",
+      "frequency": 1348,
+      "examples": [
+        "Tone matters.",
+        "Coach Bear lives by that rule.",
+        "*\u201cPositive vibes only?",
+        "Nah.",
+        "\u201cWhat we want is a\n\ngospel-sharp."
+      ],
+      "context": {
+        "category": "structure"
+      }
+    },
+    {
+      "pattern_type": "rhetorical_question",
+      "pattern_value": "rhetorical_question",
+      "frequency": 271,
+      "examples": [
+        "*\u201cPositive vibes only?",
+        "Why did you not say so before?",
+        "Why pard, he\u2019s dead!\u201d\n\n\u201cYes, I understand.\u201d\n\n\u201cOh, you do?",
+        "Yes, you see he\u2019s dead again\u2014\u201d\n\n\u201cAgain?",
+        "Why, has he ever been dead before?\u201d\n\n\u201cDead before?"
+      ],
+      "context": {
+        "category": "engagement"
+      }
+    },
+    {
+      "pattern_type": "first_person_opening",
+      "pattern_value": "first_person_opening",
+      "frequency": 471,
+      "examples": [
+        "I\n\ncan\u2019t neither trump nor follow suit.\u201d\n\nThe clergyman sank back in his chair perplexed.",
+        "I am a clergyman\u2014a parson.\u201d\n\n\u201cNow you talk!",
+        "I reckon not.",
+        "I don\u2019t want no better friend than Buck Fanshaw.",
+        "I\nknowed him by the back; and when I know a man and like him, I freeze\nto him\u2014you hear me."
+      ],
+      "context": {
+        "category": "voice"
+      }
+    },
+    {
+      "pattern_type": "second_person_opening",
+      "pattern_value": "second_person_opening",
+      "frequency": 132,
+      "examples": [
+        "You see my blind and straddle it like a man.",
+        "You see, one of the\nboys has gone up the flume\u2014\u201d\n\n\u201cGone where?\u201d\n\n\u201cUp the flume\u2014throwed up the sponge, you understand.\u201d\n\n\u201cThrown up the sponge?\u201d\n\n\u201cYes\u2014kicked the bucket\u2014\u201d\n\n\u201cAh\u2014has departed to that myst",
+        "You ought to seen him get started once.",
+        "You can\u2019t draw it too strong.",
+        "you can reclaim your life), but we back them with reasoning or evidence, and we never overpromise unrealistic outcomes."
+      ],
+      "context": {
+        "category": "voice"
+      }
+    }
+  ],
+  "paragraph_patterns": [
+    {
+      "pattern_type": "lowercase_opening",
+      "pattern_value": "lowercase_opening",
+      "frequency": 3859,
+      "examples": [
+        "document-type: character-voice, coaching-philosophy, storytelling\nknowledge-layer: company-dna\nvoice",
+        "persona: Coach Bear\ncontent-type: reference copywriting, short stories, letters, humor\nsemantic-use:",
+        "small hand and gave it a shake indicative of fraternal sympathy and\nfervent gratification.",
+        "that was gone; for, as Scotty had once said, it was \u201chis word.\u201d",
+        "subject to subject. But at last the word \u201ccircumstance,\u201d casually dropped,\nin the course of conversa"
+      ],
+      "context": {
+        "category": "style"
+      }
+    },
+    {
+      "pattern_type": "quote_opening",
+      "pattern_value": "quote_opening",
+      "frequency": 286,
+      "examples": [
+        "\"Pray keep your seat, madam, I will not disturb you. There--now it is\npretty well concealed; one wou",
+        "\"Very well, madam, it is no matter. I merely wanted to leave that sack in\nhis care, to be delivered ",
+        "\"TO BE **PUBLISHED**, or, the right man sought out by private inquiry--\neither will answer. This sac",
+        "\"I am a foreigner, and am presently going back to my own country, to\nremain there permanently. I am ",
+        "\"And now my plan is this: If you prefer to conduct the inquiry privately,\ndo so. Tell the contents o"
+      ],
+      "context": {
+        "category": "structure"
+      }
+    }
+  ],
+  "word_choices": [],
+  "phrase_patterns": [
+    {
+      "pattern_type": "recurring_phrase",
+      "pattern_value": "recurring_phrase",
+      "frequency": 973814,
+      "examples": [
+        "# coach-bears-coaching-philosophy persona",
+        "coach-bears-coaching-philosophy persona :",
+        "persona : coach",
+        ": coach bear",
+        "coach bear document"
+      ],
+      "context": {
+        "category": "lexical"
+      }
+    }
+  ],
+  "humor_patterns": [
+    {
+      "pattern_type": "explicit_humor",
+      "pattern_value": "explicit_humor",
+      "frequency": 4703,
+      "examples": [
+        "# coach-bears-coaching-philosophy\n\nPersona: Coach Bear\nDocument Type: Coaching Philosophy, Scientific Apprach, Coach Bear's Recovery Framework Recovery, character-bible, program-dna\nSemantic Use: This",
+        "Coach Bear is laser-focused on building the user\u2019s **self-efficacy** at every turn \u2013 that is, their belief in their own ability to succeed.",
+        "If a user who normally takes a stimulant every afternoon manages to go one afternoon without it for the first time in years, that\u2019s a **huge win** in Coach Bear\u2019s eyes, and he will make sure it\u2019s cele",
+        "The system will highlight it: \u201cNotice how you powered through the 3pm slump today with just a short walk and a coffee \u2013 proof that you *can* do it without the pill.\u201d This reframes the narrative from \u201c",
+        "The more the user experiences \u201cI did it!\u201d moments, the more their identity shifts to \u201cI can handle this.\u201d The program is structured to deliver a steady drip of such experiences."
+      ],
+      "context": {
+        "category": "style"
+      }
+    }
+  ],
+  "metaphor_patterns": [
+    {
+      "pattern_type": "as_metaphor",
+      "pattern_value": "as_metaphor",
+      "frequency": 3116,
+      "examples": [
+        "Coach Bear is laser-focused on building the user\u2019s **self-efficacy** at every turn \u2013 that is, their belief in their own ability to succeed.",
+        "This means engineering situations where the user experiences **mastery**, even in small doses, as early and often as possible.",
+        "Seeing a fellow struggler overcome a similar challenge invokes the feeling, \u201cIf he can do it, so can I.\u201d Coach Bear might even facilitate forming **accountability pairs or squads** among users, becaus",
+        "Each small victory \u2013 a day sober, a week of consistent sleep, saying \u201cno\u201d to a craving once \u2013 is framed not as just a box checked, but as **evidence of growth and strength**.",
+        "He has an uncanny ability to distill complex life lessons into plain, punchy truths."
+      ],
+      "context": {
+        "category": "figurative"
+      }
+    },
+    {
+      "pattern_type": "like_metaphor",
+      "pattern_value": "like_metaphor",
+      "frequency": 555,
+      "examples": [
+        "He also uses **peer modeling** to boost self-efficacy: users are shown stories or examples of others like them who succeeded (with permission and often anonymously).",
+        "He might compare overcoming addiction to \u201c*learning to walk through a mud pit: slow, messy, but one step at a time*,\u201d or remind someone struggling with consistency that \u201c*even the best quarterbacks sh",
+        "Instead of pronouncing universal truths from on high, he often says things like, *\u201cLook, I\u2019m just a guy who\u2019s screwed up plenty and learned a thing or two.",
+        "He wields truth like a well-honed blade to cut through confusion, but never to wound.",
+        "You see my blind and straddle it like a man."
+      ],
+      "context": {
+        "category": "figurative"
+      }
+    },
+    {
+      "pattern_type": "is a_metaphor",
+      "pattern_value": "is a_metaphor",
+      "frequency": 231,
+      "examples": [
+        "Over time, these accumulate into a resilient self-belief: \u201cI am stronger than this addiction.\u201d That belief becomes a powerful armor; it will carry the user through tougher battles ahead.",
+        "But \u2013 and this is crucial \u2013 his bluntness is always in service of helping that person, never to humiliate.",
+        "This aligns with the principle of *Radical Candor*, which stresses that you **can** challenge directly while still caring personally .",
+        "Importantly, Coach Bear\u2019s intellectual voice is also adaptive: he can code-switch to avoid talking *at* someone.",
+        "And behind every blunt insight is a foundation of genuine care and respect for the person receiving it."
+      ],
+      "context": {
+        "category": "figurative"
+      }
+    }
+  ],
+  "emotional_patterns": [],
+  "tone_signatures": {
+    "irreverent": 0.0,
+    "intellectual": 0.0,
+    "compassionate": 0.3333333333333333,
+    "humorous": 0.0,
+    "direct": 0.6666666666666666
+  },
+  "complexity_metrics": {
+    "avg_sentence_length": 26.377261904761905,
+    "vocabulary_diversity": 0.05437555018847482
+  },
+  "rhythm_patterns": {
+    "sentence_length_variance": 525.0975544075962,
+    "sentence_length_pattern": "highly_varied"
+  },
+  "signature_phrases": [
+    "recurring_phrase"
+  ],
+  "signature_structures": [],
+  "signature_transitions": [
+    "however",
+    "nevertheless",
+    "thus"
+  ],
+  "sample_count": 115,
+  "total_words": 221517,
+  "extraction_date": "2025-07-07T17:21:07.062807",
+  "metadata": {
+    "ai_analysis": "1. Tone characteristics: \n   - The tone in the writing samples is authoritative, encouraging, and direct. The language is clear and concise, reflecting a no-nonsense approach. It is also compassionate, as it recognizes the struggles and celebrates the small victories of the user.\n\n2. Unique voice signatures: \n   - The voice of Coach Bear is characterized by a strong focus on self-efficacy and personal growth. It uses straightforward language and reframes negative narratives into positive ones. It also uses a lot of direct address, speaking to the user in the second person (\"you\") to create a sense of connection and engagement.\n\n3. Emotional range and expression patterns: \n   - The emotional range is quite broad, covering everything from the struggles and challenges of recovery to the joy and pride of small victories. The expression patterns are consistent and focused on positivity, resilience, and personal growth.\n\n4. Humor style and techniques: \n   - The writing samples do not contain any explicit humor. However, the straightforward and no-nonsense approach can be seen as a form of dry humor.\n\n5. Rhetorical devices commonly used: \n   - The writing samples use a variety of rhetorical devices, including repetition (\"I did it!\"), metaphor (\"That belief becomes a powerful armor\"), and direct address (\"Notice how you powered through the 3pm slump today\"). It also uses rhetorical questions and reframing techniques to shift the user's perspective."
+  }
+}

@@ -1,0 +1,340 @@
+{
+  "name": "persona_voice_dna_analysis",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "meta": {
+        "type": "object",
+        "description": "Basic facts about the analysed sample.",
+        "properties": {
+          "language": {
+            "type": "string",
+            "description": "ISO-639-1 code."
+          },
+          "token_count": {
+            "type": "integer",
+            "description": "Total tokens."
+          },
+          "sentence_count": {
+            "type": "integer",
+            "description": "Total sentences."
+          },
+          "paragraph_count": {
+            "type": "integer",
+            "description": "Total paragraphs."
+          },
+          "sample_notes": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Provenance / slice indicator."
+          }
+        },
+        "required": [
+          "language",
+          "token_count",
+          "sentence_count",
+          "paragraph_count",
+          "sample_notes"
+        ],
+        "additionalProperties": false
+      },
+      "lexical_stats": {
+        "type": "object",
+        "description": "Word-level frequency metrics.",
+        "properties": {
+          "type_token_ratio": {
+            "type": "number",
+            "description": "Unique tokens ÷ total tokens."
+          },
+          "avg_word_length": {
+            "type": "number",
+            "description": "Characters per word."
+          },
+          "stopword_ratio": {
+            "type": "number",
+            "description": "Stop-words ÷ total tokens."
+          },
+          "content_word_ratio": {
+            "type": "number",
+            "description": "Content words ÷ total tokens."
+          },
+          "hapax_legomena_ratio": {
+            "type": "number",
+            "description": "Words occurring once ÷ unique tokens."
+          },
+          "top_content_words": {
+            "type": "array",
+            "description": "Rank-ordered high-frequency content words (stemmed).",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 5,
+            "maxItems": 30
+          }
+        },
+        "required": [
+          "type_token_ratio",
+          "avg_word_length",
+          "stopword_ratio",
+          "content_word_ratio",
+          "hapax_legomena_ratio",
+          "top_content_words"
+        ],
+        "additionalProperties": false
+      },
+      "ngram_signature": {
+        "type": "object",
+        "description": "Multi-word lexical fingerprints.",
+        "properties": {
+          "top_bigrams": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 5,
+            "maxItems": 30
+          },
+          "top_trigrams": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 5,
+            "maxItems": 30
+          },
+          "idiomatic_expressions": {
+            "type": "array",
+            "description": "Colloquialisms / idioms with z-scores ≥ +1.0 vs. corpus baseline.",
+            "items": {
+              "type": "string"
+            }
+          },
+          "signature_collocations": {
+            "type": "array",
+            "description": "Author-specific word pairings (PMI ≥ threshold).",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "top_bigrams",
+          "top_trigrams",
+          "idiomatic_expressions",
+          "signature_collocations"
+        ],
+        "additionalProperties": false
+      },
+      "syntactic_stats": {
+        "type": "object",
+        "description": "Sentence-level structure metrics.",
+        "properties": {
+          "avg_sentence_length": {
+            "type": "number",
+            "description": "Words per sentence."
+          },
+          "sentence_length_std_dev": {
+            "type": "number",
+            "description": "Dispersion of sentence lengths."
+          },
+          "subordination_ratio": {
+            "type": "number",
+            "description": "Sub-clauses ÷ total clauses."
+          },
+          "avg_parse_tree_depth": {
+            "type": "number",
+            "description": "Mean constituency parse depth."
+          },
+          "passive_voice_rate": {
+            "type": "number",
+            "description": "Passive constructions per 100 sentences."
+          },
+          "dominant_sentence_type": {
+            "type": "string",
+            "description": "Highest-frequency form: 'declarative' | 'interrogative' | 'imperative' | 'exclamatory'."
+          }
+        },
+        "required": [
+          "avg_sentence_length",
+          "sentence_length_std_dev",
+          "subordination_ratio",
+          "avg_parse_tree_depth",
+          "passive_voice_rate",
+          "dominant_sentence_type"
+        ],
+        "additionalProperties": false
+      },
+      "punctuation_stats": {
+        "type": "object",
+        "description": "Author’s use of non-lexical markers (rates per 100 sentences).",
+        "properties": {
+          "exclamation_rate": {
+            "type": "number"
+          },
+          "question_rate": {
+            "type": "number"
+          },
+          "comma_rate": {
+            "type": "number"
+          },
+          "semicolon_colon_rate": {
+            "type": "number"
+          },
+          "dash_rate": {
+            "type": "number"
+          },
+          "ellipsis_rate": {
+            "type": "number"
+          },
+          "punctuation_signature": {
+            "type": "array",
+            "description": "Narrative notes (e.g. 'frequent em-dashes for asides').",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "exclamation_rate",
+          "question_rate",
+          "comma_rate",
+          "semicolon_colon_rate",
+          "dash_rate",
+          "ellipsis_rate",
+          "punctuation_signature"
+        ],
+        "additionalProperties": false
+      },
+      "discourse_features": {
+        "type": "object",
+        "description": "Higher-order pragmatic signals.",
+        "properties": {
+          "dialogue_line_ratio": {
+            "type": "number",
+            "description": "Lines starting with quotation mark ÷ total lines."
+          },
+          "first_person_pronouns_per_100": {
+            "type": "number"
+          },
+          "second_person_pronouns_per_100": {
+            "type": "number"
+          },
+          "third_person_pronouns_per_100": {
+            "type": "number"
+          },
+          "narrative_perspective": {
+            "type": "string",
+            "description": "Predominant PoV: 'first', 'second', 'third', or 'mixed'."
+          },
+          "present_tense_rate": {
+            "type": "number"
+          },
+          "past_tense_rate": {
+            "type": "number"
+          },
+          "future_tense_rate": {
+            "type": "number"
+          },
+          "rhetorical_question_rate": {
+            "type": "number"
+          },
+          "direct_address_rate": {
+            "type": "number",
+            "description": "Imperatives or vocatives per 100 sentences."
+          },
+          "hedging_word_rate": {
+            "type": "number",
+            "description": "Counts of 'maybe', 'perhaps', etc."
+          },
+          "intensifier_rate": {
+            "type": "number",
+            "description": "Counts of 'very', 'absolutely', etc."
+          },
+          "top_discourse_markers": {
+            "type": "array",
+            "description": "Rank-ordered markers (e.g. 'however', 'meanwhile').",
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 20
+          }
+        },
+        "required": [
+          "dialogue_line_ratio",
+          "first_person_pronouns_per_100",
+          "second_person_pronouns_per_100",
+          "third_person_pronouns_per_100",
+          "narrative_perspective",
+          "present_tense_rate",
+          "past_tense_rate",
+          "future_tense_rate",
+          "rhetorical_question_rate",
+          "direct_address_rate",
+          "hedging_word_rate",
+          "intensifier_rate",
+          "top_discourse_markers"
+        ],
+        "additionalProperties": false
+      },
+      "sentiment_arc": {
+        "type": "array",
+        "description": "Chronological emotional contour (valence -1→1; arousal 0→1) sampled at equal-length bins.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "segment": {
+              "type": "string",
+              "description": "Percentage range, e.g. '0–10%'."
+            },
+            "valence": {
+              "type": "number"
+            },
+            "arousal": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "segment",
+            "valence",
+            "arousal"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 5
+      },
+      "stylistic_quirks": {
+        "type": "array",
+        "description": "Free-text notes of algorithmically detected oddities (e.g. 'ALL-CAPS emphasis', 'parenthetical asides every paragraph').",
+        "items": {
+          "type": "string"
+        }
+      },
+      "representative_snippets": {
+        "type": "array",
+        "description": "1–3 verbatim excerpts (≤ 280 chars each) epitomising the style.",
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 280
+        },
+        "minItems": 1,
+        "maxItems": 3
+      }
+    },
+    "required": [
+      "meta",
+      "lexical_stats",
+      "ngram_signature",
+      "syntactic_stats",
+      "punctuation_stats",
+      "discourse_features",
+      "sentiment_arc",
+      "stylistic_quirks",
+      "representative_snippets"
+    ],
+    "additionalProperties": false
+  }
+}

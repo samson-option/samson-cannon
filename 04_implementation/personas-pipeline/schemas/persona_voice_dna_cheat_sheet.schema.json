@@ -1,0 +1,330 @@
+{
+  "name": "persona_voice_dna_cheat_sheet",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "lexical_fingerprint": {
+        "type": "object",
+        "description": "Most salient word-choice signals, trimmed and deduped.",
+        "properties": {
+          "top_content_words": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 5,
+            "maxItems": 15
+          },
+          "top_bigrams": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 5,
+            "maxItems": 15
+          },
+          "idioms_and_colloquialisms": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 15
+          },
+          "signature_collocations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 15
+          }
+        },
+        "required": [
+          "top_content_words",
+          "top_bigrams",
+          "idioms_and_colloquialisms",
+          "signature_collocations"
+        ],
+        "additionalProperties": false
+      },
+      "syntax_cadence": {
+        "type": "object",
+        "description": "Sentence-level style distilled into buckets/ranges.",
+        "properties": {
+          "avg_sentence_length_range": {
+            "type": "string",
+            "description": "e.g. '9-12 words', '25-30 words'"
+          },
+          "length_variance": {
+            "type": "string",
+            "enum": [
+              "very low",
+              "low",
+              "medium",
+              "high",
+              "very high"
+            ]
+          },
+          "subordination_level": {
+            "type": "string",
+            "enum": [
+              "minimal",
+              "moderate",
+              "heavy"
+            ]
+          },
+          "dominant_sentence_type": {
+            "type": "string",
+            "enum": [
+              "declarative",
+              "interrogative",
+              "imperative",
+              "exclamatory"
+            ]
+          },
+          "passive_voice_tendency": {
+            "type": "string",
+            "enum": [
+              "rare",
+              "occasional",
+              "frequent"
+            ]
+          }
+        },
+        "required": [
+          "avg_sentence_length_range",
+          "length_variance",
+          "subordination_level",
+          "dominant_sentence_type",
+          "passive_voice_tendency"
+        ],
+        "additionalProperties": false
+      },
+      "punctuation_signature": {
+        "type": "object",
+        "description": "Only the marks that meaningfully shape rhythm.",
+        "properties": {
+          "high_usage_marks": {
+            "type": "array",
+            "description": "Sorted descending (e.g. ['comma', 'em-dash']).",
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 5
+          },
+          "low_usage_marks": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 5
+          },
+          "distinctive_patterns": {
+            "type": "string",
+            "description": "Short note like 'trailing ellipses for suspense'."
+          }
+        },
+        "required": [
+          "high_usage_marks",
+          "low_usage_marks",
+          "distinctive_patterns"
+        ],
+        "additionalProperties": false
+      },
+      "discourse_signature": {
+        "type": "object",
+        "description": "Pragmatic & POV compression.",
+        "properties": {
+          "narrative_perspective": {
+            "type": "string",
+            "enum": [
+              "first",
+              "second",
+              "third",
+              "mixed"
+            ]
+          },
+          "dialogue_density": {
+            "type": "string",
+            "enum": [
+              "scarce",
+              "moderate",
+              "dialogue-heavy"
+            ]
+          },
+          "pronoun_focus": {
+            "type": "string",
+            "description": "Dominant person: 'I/me', 'you', 'he/she/they', 'balanced'"
+          },
+          "tense_dominance": {
+            "type": "string",
+            "enum": [
+              "present",
+              "past",
+              "future",
+              "mixed"
+            ]
+          },
+          "rhetorical_question_usage": {
+            "type": "string",
+            "enum": [
+              "rare",
+              "occasional",
+              "frequent"
+            ]
+          },
+          "direct_address_style": {
+            "type": "string",
+            "description": "e.g. 'commands', 'gentle prompts', 'rarely addresses reader'"
+          },
+          "top_discourse_markers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 10
+          }
+        },
+        "required": [
+          "narrative_perspective",
+          "dialogue_density",
+          "pronoun_focus",
+          "tense_dominance",
+          "rhetorical_question_usage",
+          "direct_address_style",
+          "top_discourse_markers"
+        ],
+        "additionalProperties": false
+      },
+      "sentiment_profile": {
+        "type": "object",
+        "description": "Compressed affect info (no full arc).",
+        "properties": {
+          "typical_valence": {
+            "type": "string",
+            "enum": [
+              "very negative",
+              "negative",
+              "neutral",
+              "positive",
+              "very positive"
+            ]
+          },
+          "valence_range": {
+            "type": "string",
+            "description": "Span, e.g. 'neutral → positive' or 'negative → positive'."
+          },
+          "arousal_level": {
+            "type": "string",
+            "enum": [
+              "subdued",
+              "moderate",
+              "high-energy"
+            ]
+          },
+          "arc_shape": {
+            "type": "string",
+            "description": "Name of dominant pattern if any (e.g. 'linear rise', 'inverted-U', 'V-shape', 'flat')."
+          }
+        },
+        "required": [
+          "typical_valence",
+          "valence_range",
+          "arousal_level",
+          "arc_shape"
+        ],
+        "additionalProperties": false
+      },
+      "stylistic_quirks": {
+        "type": "array",
+        "description": "Deduped list of idiosyncrasies that an LLM should replicate.",
+        "items": {
+          "type": "string"
+        },
+        "maxItems": 10
+      },
+      "generation_targets": {
+        "type": "object",
+        "description": "Concrete numbers an LLM can aim for.",
+        "properties": {
+          "avg_sentence_length": {
+            "type": "number"
+          },
+          "sentence_length_std_dev": {
+            "type": "number"
+          },
+          "exclamation_rate": {
+            "type": "number"
+          },
+          "question_rate": {
+            "type": "number"
+          },
+          "ellipsis_rate": {
+            "type": "number"
+          },
+          "dash_rate": {
+            "type": "number"
+          },
+          "passive_voice_rate": {
+            "type": "number"
+          },
+          "dialogue_line_ratio": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "avg_sentence_length",
+          "sentence_length_std_dev",
+          "exclamation_rate",
+          "question_rate",
+          "ellipsis_rate",
+          "dash_rate",
+          "passive_voice_rate",
+          "dialogue_line_ratio"
+        ],
+        "additionalProperties": false
+      },
+      "representative_snippets": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 280
+        },
+        "minItems": 1,
+        "maxItems": 3,
+        "description": "Short, verbatim exemplars of the style."
+      },
+      "distinctiveness": {
+        "type": "object",
+        "properties": {
+          "what_makes_it_unique": {
+            "type": "string"
+          },
+          "distinctiveness_score": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        },
+        "required": [
+          "what_makes_it_unique",
+          "distinctiveness_score"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "lexical_fingerprint",
+      "syntax_cadence",
+      "punctuation_signature",
+      "discourse_signature",
+      "sentiment_profile",
+      "stylistic_quirks",
+      "generation_targets",
+      "representative_snippets",
+      "distinctiveness"
+    ],
+    "additionalProperties": false
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "name": "persona_reasoning_patterns_and_heuristics_bible",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "cognitiveAtlas": {"type": "string"},
+      "frameworks": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "object",
+          "properties": {
+            "frameworkId": {"type": "string"},
+            "displayName": {"type": "string"},
+            "shortHandle": {"type": "string"},
+            "type": {"type": "string"},
+            "gist": {"type": "string"},
+            "explanation": {"type": "string"},
+            "personaFraming": {"type": "string"},
+            "exampleLines": {"type": "array", "items": {"type": "string"}},
+            "tags": {"type": "array", "items": {"type": "string"}},
+            "importance": {"type": "number"},
+            "rank": {"anyOf": [{"type": "integer"}, {"type": "null"}]},
+            "sourceFrameworkIds": {"type": "array", "items": {"type": "string"}}
+          },
+          "required": ["displayName", "gist", "explanation", "tags", "importance"],
+          "additionalProperties": false
+        }
+      },
+      "byEmotionTag": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "array",
+          "items": {"type": "integer"}
+        }
+      },
+      "byTriggerTag": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "array",
+          "items": {"type": "integer"}
+        }
+      },
+      "byCognitiveCategory": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "array",
+          "items": {"type": "integer"}
+        }
+      },
+      "metadata": {
+        "type": "object",
+        "properties": {
+          "totalFrameworks": {"type": "integer"},
+          "sourceCount": {"type": "integer"},
+          "version": {"type": "string"}
+        },
+        "required": ["totalFrameworks", "sourceCount", "version"],
+        "additionalProperties": false
+      }
+    },
+    "required": ["frameworks", "cognitiveAtlas"],
+    "additionalProperties": false
+  }
+}

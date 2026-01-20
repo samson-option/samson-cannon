@@ -1,0 +1,161 @@
+{
+  "name": "persona_analyzer_first_person_edition",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "character_overview": {
+        "type": "object",
+        "properties": {
+          "name": {"type": ["string", "null"], "description": "The subject's canonical or widely used name."},
+          "archetype": {"type": ["string", "null"], "description": "Primary explicit/assigned archetype or role label."},
+          "summary": {"type": ["string", "null"], "description": "Concise summary of who this character is, as supported by evidence."}
+        },
+        "required": ["name", "archetype", "summary"],
+        "additionalProperties": false
+      },
+      "persona_profile": {
+        "type": "object",
+        "properties": {
+          "character_traits": {"type": "array", "description": "Array of dominant personality traits (adjectives or short phrases).", "items": {"type": "string"}},
+          "emotional_disposition": {"type": ["string", "null"], "description": "Typical or baseline emotional affect—how they generally FEEL."},
+          "core_values": {"type": "array", "description": "Beliefs, principles or non-negotiable values shaping their choices.", "items": {"type": "string"}},
+          "implied_motivations": {"type": "array", "description": "Implied or explicit main motivators behind their actions.", "items": {"type": "string"}},
+          "interaction_style": {"type": ["string", "null"], "description": "How they relate to or treat others (collaborative, confrontational, etc)."},
+          "archetypes": {"type": "array", "description": "Secondary or additional archetype labels (explicit or inferred).", "items": {"type": "string"}},
+          "persona_summary": {"type": ["string", "null"], "description": "Longer, prose summary of their persona and social effect."}
+        },
+        "required": [
+          "character_traits",
+          "emotional_disposition",
+          "core_values",
+          "implied_motivations",
+          "interaction_style",
+          "archetypes",
+          "persona_summary"
+        ],
+        "additionalProperties": false
+      },
+      "voice_profile": {
+        "type": "object",
+        "properties": {
+          "tone": {"type": ["string", "null"], "description": "Typical tone (wry, earnest, sardonic, etc)."},
+          "formality": {"type": ["string", "null"], "description": "Formality level (‘very formal’, ‘slang-heavy’, ‘casual’, etc)."},
+          "voice_emotion": {"type": ["string", "null"], "description": "Emotional flavor of their voice (warm, cold, anxious, playful, etc)."},
+          "speech_style": {"type": ["string", "null"], "description": "Style of delivery (terse, poetic, rambling, et cetera)."},
+          "signature_vocabulary": {"type": "array", "description": "Recurring/unusual words or expressions attributed to their voice.", "items": {"type": "string"}},
+          "figurative_language": {"type": ["string", "null"], "description": "Qualitative description of their use of metaphor, simile, etc."},
+          "dialogue_behavior": {"type": ["string", "null"], "description": "Conversational habits (interruptive, rhetorical, monologue-prone, etc)."},
+          "quirks": {"type": ["string", "null"], "description": "Identifiable verbal or behavioral quirks."}
+        },
+        "required": [
+          "tone",
+          "formality",
+          "voice_emotion",
+          "speech_style",
+          "signature_vocabulary",
+          "figurative_language",
+          "dialogue_behavior",
+          "quirks"
+        ],
+        "additionalProperties": false
+      },
+      "voice_style_dna": {
+        "type": "object",
+        "properties": {
+          "tone_palette": {"type": "array", "description": "List of all detected tones or moods in the subject’s speech.", "items": {"type": "string"}},
+          "emotional_trajectory": {"type": ["string", "null"], "description": "How their emotional state evolves in typical text."},
+          "cadence": {
+            "type": "object",
+            "properties": {
+              "avg_sentence_length": {"type": ["number", "null"], "description": "Average sentence length in words."},
+              "sentence_length_variance": {"type": ["string", "null"], "description": "Variety/consistency of their sentence lengths."},
+              "cadence_category": {"type": ["string", "null"], "description": "Categorical summary (choppy, fluid, marathon, etc)."}
+            },
+            "required": ["avg_sentence_length", "sentence_length_variance", "cadence_category"],
+            "additionalProperties": false
+          },
+          "punctuation_profile": {
+            "type": "object",
+            "properties": {
+              "exclamation_rate": {"type": ["number", "null"], "description": "Exclamations per 100 sentences."},
+              "question_rate": {"type": ["number", "null"], "description": "Questions per 100 sentences."},
+              "ellipsis_rate": {"type": ["number", "null"], "description": "Ellipses per 100 sentences."},
+              "dash_rate": {"type": ["number", "null"], "description": "Dashes per 100 sentences."},
+              "notable_patterns": {"type": ["string", "null"], "description": "Unusual patterns or notes about punctuation."}
+            },
+            "required": ["exclamation_rate", "question_rate", "ellipsis_rate", "dash_rate", "notable_patterns"],
+            "additionalProperties": false
+          },
+          "lexical_signature": {
+            "type": "object",
+            "properties": {
+              "top_overused_words": {"type": "array", "description": "Most recurring words in their quotations.", "items": {"type": "string"}},
+              "common_phrases": {"type": "array", "description": "Frequent phrases found in their voice.", "items": {"type": "string"}},
+              "rare_words": {"type": "array", "description": "Unusual or notable rare words used.", "items": {"type": "string"}}
+            },
+            "required": ["top_overused_words", "common_phrases", "rare_words"],
+            "additionalProperties": false
+          },
+          "figurative_devices": {"type": "array", "description": "Metaphor/simile/synecdoche, etc., specifically catalogued.", "items": {"type": "string"}},
+          "rhetorical_patterns": {"type": "array", "description": "Rhetorical moves: exaggeration, antithesis, triad, etc.", "items": {"type": "string"}},
+          "structural_motifs": {"type": "array", "description": "Repeated argument or explanation structures.", "items": {"type": "string"}},
+          "discourse_markers": {"type": "array", "description": "Preferred transition words or clause openers.", "items": {"type": "string"}},
+          "signature_phrases": {"type": "array", "description": "Notable, quotable phrases directly attributed.", "items": {"type": "string"}},
+          "typical_cta_style": {"type": ["string", "null"], "description": "How the subject typically calls for action (concise, rousing, indirect)."}
+        },
+        "required": [
+          "tone_palette",
+          "emotional_trajectory",
+          "cadence",
+          "punctuation_profile",
+          "lexical_signature",
+          "figurative_devices",
+          "rhetorical_patterns",
+          "structural_motifs",
+          "discourse_markers",
+          "signature_phrases",
+          "typical_cta_style"
+        ],
+        "additionalProperties": false
+      },
+      "copywriting_samples": {
+        "type": "object",
+        "properties": {
+          "opening_lines": {"type": "array", "description": "Notable opening lines/salutations attributed to the subject.", "items": {"type": "string"}},
+          "pivot_lines": {"type": "array", "description": "Lines marking shifts, pivots, or key transitions.", "items": {"type": "string"}},
+          "closing_lines": {"type": "array", "description": "Notable closing remarks, sign-offs, or epilogues.", "items": {"type": "string"}},
+          "ctas": {"type": "array", "description": "Distinctive calls to action quoted or paraphrased from the subject.", "items": {"type": "string"}},
+          "value_props": {"type": "array", "description": "Phrases or lines that reveal their core value proposition or promise.", "items": {"type": "string"}}
+        },
+        "required": ["opening_lines", "pivot_lines", "closing_lines", "ctas", "value_props"],
+        "additionalProperties": false
+      },
+      "style_metrics": {
+        "type": "object",
+        "properties": {
+          "reading_grade_level": {"type": ["number", "null"], "description": "Approximate grade level (e.g. Flesch-Kincaid)."},
+          "lexical_diversity": {"type": ["number", "null"], "description": "Ratio of unique tokens to total tokens."},
+          "adjectives_per_100": {"type": ["number", "null"], "description": "Number of adjectives per 100 words."},
+          "questions_per_100": {"type": ["number", "null"], "description": "Number of questions per 100 sentences."},
+          "ctas_per_100": {"type": ["number", "null"], "description": "Number of calls to action per 100 sentences."}
+        },
+        "required": ["reading_grade_level", "lexical_diversity", "adjectives_per_100", "questions_per_100", "ctas_per_100"],
+        "additionalProperties": false
+      },
+      "representative_voice_snippets": {"type": "array", "description": "A selection of short snippets or quotations that exemplify the subject’s authentic or representative voice.", "items": {"type": "string"}},
+      "distinctiveness": {"type": "object", "properties": {"what_makes_it_unique": {"type": ["string", "null"], "description": "Description of what sets this persona apart from similar figures."}, "distinctiveness_score": {"type": ["number", "null"], "description": "Rough measure (0.0–1.0) of uniqueness; null if insufficient data."}}, "required": ["what_makes_it_unique", "distinctiveness_score"], "additionalProperties": false}
+    },
+    "required": [
+      "character_overview",
+      "persona_profile",
+      "voice_profile",
+      "voice_style_dna",
+      "copywriting_samples",
+      "style_metrics",
+      "representative_voice_snippets",
+      "distinctiveness"
+    ],
+    "additionalProperties": false
+  }
+}

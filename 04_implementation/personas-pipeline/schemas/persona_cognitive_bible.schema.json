@@ -1,0 +1,393 @@
+{
+  "name": "persona_cognitive_dna_bible",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "const": "persona_cognitive_dna_bible",
+        "description": "Fixed schema identifier"
+      },
+      "strict": {
+        "type": "boolean",
+        "const": true,
+        "description": "Always true for strict schema application"
+      },
+      "schema": {
+        "$ref": "#/$defs/payload"
+      }
+    },
+    "required": [
+      "name",
+      "strict",
+      "schema"
+    ],
+    "additionalProperties": false,
+    "$defs": {
+      "framework_object": {
+        "type": "object",
+        "properties": {
+          "framework_id": {
+            "type": "string",
+            "description": "Canonical slug identifier"
+          },
+          "display_name": {
+            "type": "string",
+            "description": "Human-readable name"
+          },
+          "short_handle": {
+            "type": "string",
+            "description": "Abbreviated handle"
+          },
+          "merged_types": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Union of all types referencing the framework"
+          },
+          "cognitive_category": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Deduplicated set of cognitive categories"
+          },
+          "one_sentence_gist": {
+            "type": "string",
+            "description": "Concise summary (≤200 chars)"
+          },
+          "persona_reframe": {
+            "type": "string",
+            "description": "Persona-aligned summary phrasing"
+          },
+          "key_principles": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Core principles (≤7 items)"
+          },
+          "step_by_step_heuristic": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Sequenced heuristic steps"
+          },
+          "illustrative_anecdote": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Most vivid anecdote (≤120 words)"
+          },
+          "emotional_context_tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Tags referencing emotional context"
+          },
+          "typical_user_triggers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Events commonly activating this heuristic"
+          },
+          "domain_tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Associated domains"
+          },
+          "reasoning_style_tag": {
+            "type": "string",
+            "description": "Majority-vote style (or hybrid)"
+          },
+          "rhetorical_pattern_tag": {
+            "type": "string",
+            "description": "Rhetorical archetype"
+          },
+          "anti_patterns": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Common misapplications"
+          },
+          "cautionary_notes": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Warnings and edge cases"
+          },
+          "aligns_with_values": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Aligned persona values"
+          },
+          "importance_score": {
+            "type": "number",
+            "description": "Weighted mean (1–5, 0.1 increments)",
+            "minimum": 1,
+            "maximum": 5,
+            "multipleOf": 0.1
+          },
+          "source_tally": {
+            "type": "number",
+            "description": "How many extractor objects merged"
+          },
+          "representative_quotes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Distinct provenance quotes (max 3)"
+          },
+          "related_framework_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Deduped related framework IDs"
+          },
+          "conflicting_framework_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Deduped conflicting framework IDs"
+          },
+          "last_updated": {
+            "type": "string",
+            "format": "date-time",
+            "description": "ISO-8601 most recent update"
+          }
+        },
+        "required": [
+          "framework_id",
+          "display_name",
+          "short_handle",
+          "merged_types",
+          "cognitive_category",
+          "one_sentence_gist",
+          "persona_reframe",
+          "key_principles",
+          "step_by_step_heuristic",
+          "illustrative_anecdote",
+          "emotional_context_tags",
+          "typical_user_triggers",
+          "domain_tags",
+          "reasoning_style_tag",
+          "rhetorical_pattern_tag",
+          "anti_patterns",
+          "cautionary_notes",
+          "aligns_with_values",
+          "importance_score",
+          "source_tally",
+          "representative_quotes",
+          "related_framework_ids",
+          "conflicting_framework_ids",
+          "last_updated"
+        ],
+        "additionalProperties": false
+      },
+      "payload": {
+        "type": "object",
+        "properties": {
+          "meta": {
+            "type": "object",
+            "properties": {
+              "persona_id": {
+                "type": "string",
+                "description": "Stable unique persona reference"
+              },
+              "persona_name": {
+                "type": "string",
+                "description": "Short display name"
+              },
+              "total_frameworks_ingested": {
+                "type": "number",
+                "description": "Count of extractors merged"
+              },
+              "compiler_timestamp": {
+                "type": "string",
+                "format": "date-time",
+                "description": "ISO-8601 compile time"
+              },
+              "version": {
+                "type": "string",
+                "description": "Schema version string (semver, e.g. '1.0.0')"
+              },
+              "notes": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ],
+                "description": "Compiler comments"
+              }
+            },
+            "required": [
+              "persona_id",
+              "persona_name",
+              "total_frameworks_ingested",
+              "compiler_timestamp",
+              "version",
+              "notes"
+            ],
+            "additionalProperties": false
+          },
+          "summary_sections": {
+            "type": "object",
+            "properties": {
+              "cognitive_atlas": {
+                "type": "string",
+                "description": "≤ 250 word mental model summary"
+              },
+              "signature_heuristics": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Ranked top 10 framework_ids by importance"
+              },
+              "value_alignment_matrix": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "string"
+                    },
+                    "supporting_framework_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "required": [
+                    "value",
+                    "supporting_framework_ids"
+                  ],
+                  "additionalProperties": false
+                },
+                "description": "Value to supporting-framework matrix"
+              }
+            },
+            "required": [
+              "cognitive_atlas",
+              "signature_heuristics",
+              "value_alignment_matrix"
+            ],
+            "additionalProperties": false
+          },
+          "frameworks": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/framework_object"
+            },
+            "description": "Unique fused frameworks sorted by descending importance_score"
+          },
+          "distinctiveness": {
+            "type": "object",
+            "properties": {
+              "what_makes_the_toolkit_unique": {
+                "type": "string",
+                "description": "≤150 words: quick distinctiveness narrative"
+              },
+              "uniqueness_score": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1,
+                "description": "Entropy-based diversity score (0-1 float)"
+              }
+            },
+            "required": [
+              "what_makes_the_toolkit_unique",
+              "uniqueness_score"
+            ],
+            "additionalProperties": false
+          },
+          "cross_reference_indices": {
+            "type": "object",
+            "properties": {
+              "by_cognitive_category": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "placeholder_1": {
+                    "type": "string",
+                    "description": "Placeholder - replace with the strict field you want"
+                  }
+                },
+                "required": [
+                  "placeholder_1"
+                ]
+              },
+              "by_emotion_tag": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "placeholder_1": {
+                    "type": "string",
+                    "description": "Placeholder - replace with the strict field you want"
+                  }
+                },
+                "required": [
+                  "placeholder_1"
+                ]
+              },
+              "by_domain_tag": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "placeholder_1": {
+                    "type": "string",
+                    "description": "Placeholder - replace with the strict field you want"
+                  }
+                },
+                "required": [
+                  "placeholder_1"
+                ]
+              }
+            },
+            "required": [
+              "by_cognitive_category",
+              "by_emotion_tag",
+              "by_domain_tag"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "meta",
+          "summary_sections",
+          "frameworks",
+          "distinctiveness",
+          "cross_reference_indices"
+        ],
+        "additionalProperties": false
+      }
+    }
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "voice_id": "e429d532f8fe",
+  "persona": "Hangman",
+  "sentence_patterns": [
+    {
+      "pattern_type": "long_sentence",
+      "pattern_value": "long_sentence",
+      "frequency": 5323,
+      "examples": [
+        "# sample-irreverent-writing\n\npersona: Hangman\ntone: irreverent, sharp, witty, intelligent\ncontent-type: essays, philosophizing, self-help, self-improvement\ngenre: irreverent self-help\n\n## sample-irrev",
+        "I planned on\nspending much of the next few years living abroad, experiencing new\ncultures, and taking advantage of the lower cost of living in a number of\ndeveloping countries in Asia and Latin Americ",
+        "At the time I was hardly\naware of it, but if I was completely honest with myself, I knew there was a\nscrewed-up value lurking there, somewhere beneath the surface.",
+        "I had spent the past few years overcompensating for the inadequacy\nand social anxiety of my teenager years, and as a result I felt like I could\nmeet anybody I wanted, be friends with anybody I wanted,",
+        "Armed with this grandiose sense of connectivity to the world, I bounced\nback and forth across countries and oceans in a game of global hopscotch\nthat lasted over five years."
+      ],
+      "context": {
+        "category": "structure"
+      }
+    },
+    {
+      "pattern_type": "first_person_opening",
+      "pattern_value": "first_person_opening",
+      "frequency": 2567,
+      "examples": [
+        "I planned on\nspending much of the next few years living abroad, experiencing new\ncultures, and taking advantage of the lower cost of living in a number of\ndeveloping countries in Asia and Latin Americ",
+        "I couldn\u2019t\nsee it, but in quiet moments when I was completely honest with myself, I\ncould feel it.",
+        "I had spent the past few years overcompensating for the inadequacy\nand social anxiety of my teenager years, and as a result I felt like I could\nmeet anybody I wanted, be friends with anybody I wanted,",
+        "I visited fifty-five countries, made dozens of\nfriends, and found myself in the arms of a number of lovers\u2014all of whom\nwere quickly replaced and some of whom were already forgotten by the\nnext flight ",
+        "I have a house and furniture and an electric bill\nand a wife."
+      ],
+      "context": {
+        "category": "voice"
+      }
+    },
+    {
+      "pattern_type": "rhetorical_question",
+      "pattern_value": "rhetorical_question",
+      "frequency": 1063,
+      "examples": [
+        "I had spent the past few years overcompensating for the inadequacy\nand social anxiety of my teenager years, and as a result I felt like I could\nmeet anybody I wanted, be friends with anybody I wanted,",
+        "If I could experience everything equally, then I should experience\nthem all equally, right?",
+        "(Snow in May?",
+        "Seriously, what kind\n\nof guy shits on romantic love?",
+        "their own problems and/or\n\nWhat do poor boundaries look like?"
+      ],
+      "context": {
+        "category": "engagement"
+      }
+    },
+    {
+      "pattern_type": "short_sentence",
+      "pattern_value": "short_sentence",
+      "frequency": 7474,
+      "examples": [
+        "Now I live in New York.",
+        "None of it is particularly glamorous or exciting.",
+        "And I like it\nthat way.",
+        "Such was traveling with me.",
+        "The food sucked."
+      ],
+      "context": {
+        "category": "structure"
+      }
+    },
+    {
+      "pattern_type": "second_person_opening",
+      "pattern_value": "second_person_opening",
+      "frequency": 366,
+      "examples": [
+        "You\ndon\u2019t smile at strangers or pretend to like anything you don\u2019t.",
+        "You know how jealous I\n\nget.",
+        "You have to stay home with me.\u201d\n\n\u201cMy coworkers are idiots; they always make me late to meetings\n\nbecause I have to tell them how to do their jobs.\u201d\n\n\u201cI can\u2019t believe you made me feel so stupid in fron",
+        "You should have\nknown that and canceled your plans.\u201d Or they take on too much\nresponsibility for other people\u2019s problems: \u201cShe just lost her job again, but\nit\u2019s probably my fault because I wasn\u2019t as s",
+        "You can\u2019t solve other people\u2019s\nproblems for them either, because that likewise won\u2019t make them happy."
+      ],
+      "context": {
+        "category": "voice"
+      }
+    }
+  ],
+  "paragraph_patterns": [
+    {
+      "pattern_type": "lowercase_opening",
+      "pattern_value": "lowercase_opening",
+      "frequency": 1628,
+      "examples": [
+        "persona: Hangman\ntone: irreverent, sharp, witty, intelligent\ncontent-type: essays, philosophizing, s",
+        "culture? If I could experience everything equally, then I should experience\nthem all equally, right?",
+        "life, replete with fantastic, horizon-breaching\nexperiences as well as superficial highs designed to",
+        "were rude and smelled funny. Nobody smiled and everyone drank too\nmuch. Yet, I loved it. It was one ",
+        "everything cohere and harmonize, is a deep and subtle form of entitlement.\nEntitled people, because "
+      ],
+      "context": {
+        "category": "style"
+      }
+    }
+  ],
+  "word_choices": [],
+  "phrase_patterns": [
+    {
+      "pattern_type": "recurring_phrase",
+      "pattern_value": "recurring_phrase",
+      "frequency": 2686054,
+      "examples": [
+        "# sample-irreverent-writing persona",
+        "sample-irreverent-writing persona :",
+        "persona : Hangman",
+        ": Hangman tone",
+        "Hangman tone :"
+      ],
+      "context": {
+        "category": "lexical"
+      }
+    }
+  ],
+  "humor_patterns": [
+    {
+      "pattern_type": "explicit_humor",
+      "pattern_value": "explicit_humor",
+      "frequency": 14029,
+      "examples": [
+        "# sample-irreverent-writing\n\npersona: Hangman\ntone: irreverent, sharp, witty, intelligent\ncontent-type: essays, philosophizing, self-help, self-improvement\ngenre: irreverent self-help\n\n## sample-irrev",
+        "It was the digital nomad dream and as a twenty-five-year-old\nadventure-seeker, it was exactly what I wanted out of life.",
+        "Sure, I had some admirable\nvalues going on\u2014a thirst to see the world, a curiosity for people and\nculture, some old-fashioned adventure-seeking.",
+        "But there also existed a\nfaint outline of shame underlying everything else.",
+        "At the time I was hardly\naware of it, but if I was completely honest with myself, I knew there was a\nscrewed-up value lurking there, somewhere beneath the surface."
+      ],
+      "context": {
+        "category": "style"
+      }
+    }
+  ],
+  "metaphor_patterns": [
+    {
+      "pattern_type": "as_metaphor",
+      "pattern_value": "as_metaphor",
+      "frequency": 10993,
+      "examples": [
+        "By this time my\nlittle dating advice blog was getting some traffic and I was actually making\na modest amount of money selling PDFs and courses online.",
+        "I planned on\nspending much of the next few years living abroad, experiencing new\ncultures, and taking advantage of the lower cost of living in a number of\ndeveloping countries in Asia and Latin Americ",
+        "It was the digital nomad dream and as a twenty-five-year-old\nadventure-seeker, it was exactly what I wanted out of life.",
+        "But as sexy and heroic as my plan sounded, not all of the values driving\nme to this nomadic lifestyle were healthy ones.",
+        "Sure, I had some admirable\nvalues going on\u2014a thirst to see the world, a curiosity for people and\nculture, some old-fashioned adventure-seeking."
+      ],
+      "context": {
+        "category": "figurative"
+      }
+    },
+    {
+      "pattern_type": "like_metaphor",
+      "pattern_value": "like_metaphor",
+      "frequency": 1774,
+      "examples": [
+        "I had spent the past few years overcompensating for the inadequacy\nand social anxiety of my teenager years, and as a result I felt like I could\nmeet anybody I wanted, be friends with anybody I wanted,",
+        "And I like it\nthat way.",
+        "You\ndon\u2019t smile at strangers or pretend to like anything you don\u2019t.",
+        "If you really like someone and are having a\ngreat time, you tell her that you like her and are having a great time.",
+        "There was nothing combative about the way she said\nit; it was spoken as if it were some mundane fact\u2014like the quality of the\nweather that day, or her shoe size\u2014but I was still shocked."
+      ],
+      "context": {
+        "category": "figurative"
+      }
+    },
+    {
+      "pattern_type": "is a_metaphor",
+      "pattern_value": "is a_metaphor",
+      "frequency": 434,
+      "examples": [
+        "This is a cornerstone of many of the\nso-called positive thinking books: open yourself up to opportunities, be\naccepting, say yes to everything and everyone, and so on.",
+        "That rejection is an inherent and necessary part of maintaining our\nvalues, and therefore our identity.",
+        "The desire to avoid rejection at all costs, to avoid confrontation and\nconflict, the desire to attempt to accept everything equally and to make\n\neverything cohere and harmonize, is a deep and subtle f",
+        "Rejection is an important and crucial life skill.",
+        "Honesty is a natural human craving."
+      ],
+      "context": {
+        "category": "figurative"
+      }
+    }
+  ],
+  "emotional_patterns": [],
+  "tone_signatures": {
+    "irreverent": 0.3333333333333333,
+    "intellectual": 0.3333333333333333,
+    "compassionate": 0.0,
+    "humorous": 0.3333333333333333,
+    "direct": 0.3333333333333333
+  },
+  "complexity_metrics": {
+    "avg_sentence_length": 19.573632849629302,
+    "vocabulary_diversity": 0.03457332683460798
+  },
+  "rhythm_patterns": {
+    "sentence_length_variance": 184.78826998471138,
+    "sentence_length_pattern": "highly_varied"
+  },
+  "signature_phrases": [
+    "recurring_phrase"
+  ],
+  "signature_structures": [],
+  "signature_transitions": [
+    "therefore",
+    "nevertheless",
+    "thus"
+  ],
+  "sample_count": 107,
+  "total_words": 617564,
+  "extraction_date": "2025-07-07T17:21:20.978612",
+  "metadata": {
+    "ai_analysis": "1. Tone Characteristics: The tone of this writing sample is predominantly irreverent, with a sharp and witty edge. It's also intellectual, as the author uses complex ideas and concepts to express his thoughts. The tone is also somewhat introspective, as the author reflects on his past experiences and values.\n\n2. Unique Voice Signatures: The author's voice is characterized by a candid, no-nonsense style. He doesn't shy away from discussing personal flaws and mistakes, which adds a layer of authenticity to his writing. He also uses a conversational style, with phrases like \"But there also existed a faint outline of shame underlying everything else\" and \"It was a strange life, replete with fantastic, horizon-breaching experiences as well as superficial highs designed to numb my underlying pain.\" This creates a sense of intimacy and familiarity with the reader.\n\n3. Emotional Range and Expression Patterns: The author's emotional range is quite broad, covering everything from excitement and adventure to shame and regret. He expresses these emotions in a direct, unfiltered way, often using vivid and evocative language. For example, he describes his past lifestyle as a \"game of global hopscotch\" and his current life as \"a house and furniture and an electric bill and a wife.\"\n\n4. Humor Style and Techniques: The author's humor is dry and self-deprecating. He often uses humor to highlight the absurdity of his past behavior, such as when he describes his past self as having a \"grandiose sense of connectivity to the world\" and bouncing \"back and forth across countries and oceans.\"\n\n5. Rhetorical Devices Commonly Used: The author frequently uses metaphors and similes to illustrate his points. For example, he compares his past lifestyle to a game of hopscotch and his current life to a house with furniture and an electric bill. He also uses repetition for emphasis, such as when he repeats the phrase \"anybody I wanted\" to highlight his past sense of entitlement. Additionally, he uses rhetorical questions to provoke thought and engage the reader, such as \"If I could experience everything equally, then I should experience them all equally, right?\""
+  }
+}
