@@ -19,13 +19,47 @@ Python 3.13+ required. Uses `pyproject.toml` for dependency management.
 
 The repository is organized from abstract philosophy to concrete implementation:
 
-- **`01_manifesto/`** - Foundational beliefs, mission, and culture (the "Why")
-- **`02_solution/`** - Recovery framework, platform strategy, AI coach definitions (the "What")
-- **`03_brand/`** - Creative DNA, copywriting voices, visual directives (the "Vibe")
-- **`04_implementation/`** - Engineering directives and persona pipelines (the "How")
-  - `how-we-build.md` - Core engineering philosophy (Reference-Driven Design)
-  - `personas-pipeline/schemas/` - JSON schemas for Character Bibles and Reasoning Patterns
-- **`05_research/`** - Academic papers on addiction, dopamine, psychology (ground truth)
+### 01_manifesto/ - The WHY (Foundational Beliefs)
+
+Core documents defining the organization's irreducible beliefs and identity:
+
+- `axioms.md` - The six foundational axioms upon which everything is built
+- `mission.md` - What we do, who we serve, how we differ
+- `values.md` - Operating principles (non-negotiable)
+- `origin.md` - The founder's story and the gap that created us
+- `culture.md` - The Phalanx model and three theaters of connection
+
+### 02_solution/ - The WHAT (Recovery Framework)
+
+The methodology and platform strategy:
+
+- `framework.md` - Complete 9-month recovery methodology (Scan-Engage-Secure-Reload loop)
+- `philosophy.md` - Theoretical foundations (why existing solutions fail, primacy of motivation)
+- `knowledge-base.md` - Recovery Bible with indexed knowledge blocks
+- `platform/personas.md` - AI persona definitions (Coach Bear, Dr. Love, Wingman)
+- `people/founder.md` - Founder profile
+
+### 03_brand/ - The VIBE (Creative Expression)
+
+Brand voice and visual direction:
+
+- `voice.md` - Brand voice principles and persona voice summaries
+- `visual/emotional-scene-directive.md` - Scene generation canon (15 emotional journey stages)
+- `copywriting/` - Voice DNA JSON extracts for personas
+
+### 04_implementation/ - The HOW (Engineering)
+
+Technical specifications and build processes:
+
+- `how-we-build.md` - Core engineering philosophy (Reference-Driven Design)
+- `mvp-jobs.md` - MVP feature specification
+- `metrics-framework.md` - Dopamine Resilience Score and 9-month KPI tracking
+- `onboarding-ux.md` - User profile schema and onboarding flow
+- `personas-pipeline/` - Schemas and compilers for persona generation
+
+### 05_research/ - Ground Truth
+
+Academic papers on addiction, dopamine, psychology sourced from Gabor Mate, Anna Lembke, James Clear, and others.
 
 ## Development Philosophy: Reference-Driven Design
 
@@ -43,6 +77,16 @@ Persona definitions live in `04_implementation/personas-pipeline/schemas/`:
 - `character_bible.schema.json` - Master structure for a persona
 - `persona_voice_dna_analysis.schema.json` - How a persona speaks
 - `persona_reasoning_patterns_and_heuristics_*.schema.json` - AI thought processes
+
+## Core Concepts
+
+Key terminology used throughout the canon:
+
+- **Sovereignty**: Executive agency over one's own mind and life (the end goal)
+- **Dopamine Fitness**: Measure of reward system regulation and resilience
+- **The Phalanx**: Tactical brotherhood model for mutual accountability
+- **The Loop**: Scan-Engage-Secure-Reload daily practice cycle
+- **Three Domains**: Neurochemical reset, behavioral reconditioning, identity reconstruction
 
 ## GitHub Automation
 
